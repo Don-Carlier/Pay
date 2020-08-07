@@ -1,0 +1,16 @@
+.header {
+  border: 1px solid red;
+  height: 80px;
+  display: flex;
+}
+.header__logo {
+  height: 80px;
+  width: 200px;
+}
+.header__logo img {
+  max-height: 80px;
+  margin: 8px;
+}
+.header__language {
+  border: 2px solid blue;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank you for your order</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="index-en.html">
+          <img alt="pay _logo" src="img/pay_logo.png" />
+        </a>
+      </div>
+      <div class="header__language">
+        <a onclick="toggleLanguageMenu()" id="language-select" class="language__label">
+          Language
+          <i id="chevron" class="material-icons">arrow_drop_down</i>
+        </a>
+     
+          <ul class="language__menu">
+            <li>
+              <a class="dutch" href="bedankt.html">
+                <i class="icon icon__dutch"></i>
+                Nederlands
+              </a> 
+            </li>
+            <li>
+              <a class="english" href="thanks.html">
+                <i class="icon icon__english"></i>
+                English
+              </a> 
+            </li>
+          </ul>
+     
+      </div>
+    </header>
+    <main>  
+      <div class="thanks">
+        <h1>Thank you for your order</h1>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="column">
+        <ul>
+          <li><a href="http://www.pay.nl/en" target="_blank">What does pay.nl do?</a></li>
+          <li><a href="http://www.mastercard.com" target="_blank">MasterCard Securecode</a></li>
+          <li><a href="http://www.visa.com" target="_blank">Verified by Visa</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <ul>
+          <li><p>For questions</p></li>
+          <li>T: <a href="+31 8888 666 10" type="tel">+31 8888 666 10</a></li>
+          <li>E: <a href="info@pay.nl" type="email">info@pay.nl</a></li>
+         
+        </ul>
+      </div>
+      <div class="column">
+        <ul>
+          <li>
+            <p>This payment method is provided by Pay.nl <br> For more information: <a href="http://www.pay.nl/en" target="_blank">www.pay.nl</a> </p>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+
+    <script src="src/js/index.js"></script>
+</body>
+</html>

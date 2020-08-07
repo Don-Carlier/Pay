@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visa betalen</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+    <header class="header">
+      <div class="header__logo">
+        <img alt="pay _logo" src="img/pay_logo.png" />
+      </div>
+      <div class="header__language">
+        <a onclick="toggleLanguageMenu()" id="language-select" class="language__label">
+          Taal
+          <i id="chevron" class="material-icons">arrow_drop_down</i>
+        </a>
+          <ul class="language__menu">
+            <li>
+              <a class="dutch" href="index-nl.html">
+                <i class="icon icon__dutch"></i>
+                Nederlands
+              </a> 
+            </li>
+            <li>
+              <a class="english" href="index-en.html">
+                <i class="icon icon__english"></i>
+                English
+              </a> 
+            </li>
+          </ul>
+      </div>
+    </header>
+    
+    <main>
+      <form class="form" id="form" name="form1" action="bedankt.html">
+        <div class="wrap wrap__holder">
+          <label for="card-holder">Kaart Houder</label>
+          <input id="card-holder" type="text" placeholder="Naam Kaart Houder" required />
+        </div>
+
+        <div class="wrap wrap__mail">
+          <label for="email-address">Email Adres</label>
+          <input id="email-address" type="email" placeholder="email@adres.nl" required />
+        </div>
+
+        <div class="wrap wrap__card">
+          <div class="wrap wrap__number">
+            <label for="card-number">Kaart Nummer</label>
+            <input id="card-number" type="number" placeholder="16-cijferig nummer (4111432143214321)" name="text1" required/>
+          </div>
+          
+          <div class="wrap wrap__cvc">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="number" min="100" max="999" placeholder="123" required/>
+          </div>
+        </div>
+        
+        <div class="wrap wrap__date">
+          <div class="wrap wrap__month">
+            <label for="date-month">Geldig tot maand</label>
+            <select name="month" id="month">
+              <option value="January">01 - Januari</option>
+              <option value="February">02 - Februari</option>
+              <option value="March">03 - Maart</option>
+              <option value="April">04 - April</option>
+              <option value="May">05 - Mei</option>
+              <option value="June">06 - Juni</option>
+              <option value="July">07 - Juli</option>
+              <option value="August" selected>08 - Augustus</option>
+              <option value="September">09 - September</option>
+              <option value="October">10 - Oktober</option>
+              <option value="November">11 - November</option>
+              <option value="December">12 - December</option>
+          </select>
+          </div>
+
+          <div class="wrap wrap__year">
+            <label for="date-month">Jaar</label>
+            <select name="year" id="year">
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <input type="submit" value="Annuleren" class="btn btn__cancel" onclick="cancelForm()"/>
+          <input type="submit" value="Doorgaan" class="btn btn__continue" onclick="cardnumber(document.form1.text1)"/>
+        </div>
+      </form>
+
+      <div class="sidebar">
+        <div class="amount">
+          <span class="title">Transactie bedrag</span>
+          <span class="data">&euro; 0,10</span>
+        </div>
+        <div class="beneficiary">
+          <span class="title">Ontvanger</span>
+          <span class="data">Demotour Pay.nl (NL)</span>
+        </div>
+        <div class="service">
+          <span class="title">Service</span>
+          <span class="data">Factuur betaling</span>
+        </div>
+        <div class="description">
+          <span class="title">Order beschrijving</span>
+          <span class="data">1234 1234 1234 1234</span>
+        </div>
+      
+      </div>
+    </main>
+    
+    <footer>
+      <div class="column">
+        <ul>
+          <li><a href="http://www.pay.nl" target="_blank">Wat doet pay.nl?</a></li>
+          <li><a href="http://www.mastercard.com" target="_blank">MasterCard Securecode</a></li>
+          <li><a href="http://www.visa.com" target="_blank">Geverifieerd door Visa</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <ul>
+          <li><p>Vragen?</p></li>
+          <li>T: <a href="+31 8888 666 10" type="tel">+31 8888 666 10</a></li>
+          <li>E: <a href="info@pay.nl" type="email">info@pay.nl</a></li>
+         
+        </ul>
+      </div>
+      <div class="column">
+        <ul>
+          <li>
+            <p>Deze betaalmethode wordt verzorgd door Pay.nl <br> Voor meer informatie: <a href="http://www.pay.nl" target="_blank">www.pay.nl</a> </p>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="src/js/index.js"></script>
+</body>
+</html>

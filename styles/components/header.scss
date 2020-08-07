@@ -1,0 +1,110 @@
+.header {
+    border-bottom: 1px solid $border-grey;
+    background: linear-gradient(180deg, rgba(10, 10, 181, 1) 48%, rgba(0, 80, 209, 1) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        margin: auto 8px;
+        height: 80px;
+        width: 200px;
+
+        img {
+            max-height: 72px;
+            top: 50%;
+            position: relative;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__language {
+        color: white;
+        margin-right: 8px;
+
+        &.visible {
+            .language__menu {
+                pointer-events: auto;
+                @include foldout;
+            }
+        }
+    }
+
+    .language {
+        &__label {
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            width: 100%;
+            top: 50%;
+            position: relative;
+            transform: translate(0px, -50%);
+            background: white;
+            color: black;
+            cursor: pointer;
+            padding: 0 8px;
+            position: relative;
+            font-weight: normal;
+            border-radius: 4px;
+
+            i {
+                position: absolute;
+                top: 6px;
+                right: 8px;
+            }
+        }
+
+        &__menu {
+            cursor: pointer;
+            pointer-events: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #eeeeee;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, .07);
+            margin-top: 16px;
+            border-radius: 0 0 4px 4px;
+
+            @include foldin;
+
+            li {
+                height: 40px;
+                line-height: 40px;
+
+                a {
+                    color: black;
+                    font-size: 14px;
+                    font-weight: normal;
+                    padding: 0 16px;
+                    display: inline-block;
+
+                    .icon {
+                        display: inline-block;
+                        content: '';
+                        position: relative;
+                        width: 20px;
+                        height: 16px;
+                        margin-right: 8px;
+                        top: 3px;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+
+                        &__dutch {
+                            background-image: url('../img/nl.svg');
+
+                        }
+
+                        &__english {
+                            background-image: url('../img/gb.svg');
+
+                        }
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.form {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    //breakpoint
+    @include md {
+        width: 66.66%;
+    }
+
+    label {
+        margin-top: 32px;
+        margin-bottom: 4px;
+    }
+
+    //Refactoring Wrap
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        @include rowintro;
+
+        &__card,
+        &__date {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        
+            .wrap__number {
+                width: 70%;
+                padding-right: 16px;
+            }
+    
+            .wrap__cvc {
+                width: 30%;
+            }
+    
+            .wrap__month {
+                padding-right: 16px;
+            }
+        }
+    }
+
+    input,
+    select {
+        background: #fff;
+        color: #525865;
+        border-radius: 4px;
+        border: 1px solid $border-grey;
+        box-shadow: inset 1px 2px 8px rgba(0, 0, 0, .07);
+        font-family: inherit;
+        font-size: 1em;
+        height: 40px;
+        line-height: 40px;
+        outline: none;
+        padding: .5em 1em .5em;
+        transition: .18s ease-out;
+
+        &:hover {
+            box-shadow: inset 1px 2px 8px rgba(0, 0, 0, .02);
+        }
+
+        &:focus {
+            color: #4b515d;
+            border: 1px solid #B8B6B6;
+            box-shadow: inset 1px 2px 4px rgba(0, 0, 0, .01), 0px 0px 8px rgba(0, 0, 0, .2);
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+        color: $placeholder-color;
+    }
+      
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $placeholder-color;
+    }
+    
+    ::placeholder {
+        color: $placeholder-color;
+    }
+
+    .buttons {
+        @include buttonintro;
+        margin: 32px 0;
+        
+        .btn {
+            border: 0;
+            border-radius: 4px;
+            background: $color-grey;
+            color: white;
+            text-transform: uppercase;
+            font-weight: normal;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: .1em;
+            font-size: 14px;
+            padding: .6em 1em .7em;
+            transition: .18s ease-out;
+            
+            &:hover {
+                box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, .4);
+                cursor: pointer;
+            }
+
+            &:first-child {
+                margin-right: 24px;
+                
+                &:hover {
+                    background: rgb(177, 177, 177);
+                }
+            }
+
+            &:last-child { 
+                background: rgb(0, 128, 0);
+
+                &:hover {
+                    background: rgb(3, 163, 3);
+                }
+            }    
+        }
+    }
+}
+
+.thanks {
+    padding: 16px;
+}
+

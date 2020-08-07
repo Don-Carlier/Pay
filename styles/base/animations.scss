@@ -1,0 +1,73 @@
+@mixin foldin {
+    transition: max-height .15s ease-out;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin foldout {
+    height: auto;
+    max-height: 80px;
+    transition: max-height .15s ease-out;
+}
+
+@mixin rowintro {
+    @keyframes rowintro {
+        from {
+            opacity: 0;
+            margin-top: -15px;
+        }
+
+        to {   
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+
+    animation-name: rowintro;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+}
+
+@mixin buttonintro {
+    @keyframes buttonintro {
+        0%   {
+            opacity: 0;
+            margin-left: -15px;
+        }
+        
+        50%  {
+            opacity: 0;
+            margin-left: -15px;
+        }
+       
+        100% {
+            opacity: 1;
+            margin-left: 0;
+        }
+    }
+
+    animation-name: buttonintro;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@mixin sideintro {
+    position: relative;
+    @keyframes sideintro {
+        0%   {
+            opacity: 0;
+            right: -200px;
+        }
+       
+        25% {
+            opacity: 1;
+            right: 0;
+        }
+    }
+
+    animation-name: sideintro;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
