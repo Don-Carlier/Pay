@@ -16,7 +16,7 @@ Valid 16 no visa nr: 4111234567891234
 #### Nice to haves (est): 
 - Custom error handling (~8)
 - Current date validation.(~8) Nu is het mogelijk een datum in het verleden te kiezen. Icm bv moment.js is het mogelijk dit af te vangen.
-- NPM build inrichten (~4)
+- NPM build inrichten (~4) Scss build via commandline ipv Prepos
 - Release inrichten (?)
 
 ### SOURCES:
