@@ -21,4 +21,5 @@ Nice to haves (est):
 
 SOURCES:
 CC validation: https://www.w3resource.com/javascript/form/credit-card-validation.php
+
 Frontend translating: https://www.i18next.com/
