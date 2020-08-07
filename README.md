@@ -19,7 +19,7 @@ Valid 16 no visa nr: 4111234567891234
 - NPM build inrichten (~4)
 - Release inrichten (?)
 
-###S OURCES:
+### SOURCES:
 CC validation: https://www.w3resource.com/javascript/form/credit-card-validation.php
 
 Frontend translating: https://www.i18next.com/
